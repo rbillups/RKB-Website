@@ -1,0 +1,51 @@
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+.home-bg-image {
+    filter: brightness(50%);
+    height: 100vh; /* Set the height to 50% of the viewport height */
+    background-image: url('images/IMG_3237.JPG');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    position: relative;
+}
+.navbar-brand-logo {
+    display: inline-block; /* Makes it possible to set dimensions */
+    width: 30px; /* Adjust width as needed */
+    height: 30px; /* Adjust height as needed */
+    background-image: url('images/RKB_white.png'); /* Path to your image */
+    /*background-size: cover; /* Ensures the image covers the span area */
+    background-position: center; /* Centers the background image */
+}
+
+
+.home-navbar {
+    overflow: hidden;
+    backdrop-filter: blur(10px); /* Optional: Add a blur effect for a frosted glass look */
+}
+
+.navbar-brand {
+    color: rgb(0, 0, 0) !important; /* Ensure high contrast against the background */
+}
+
+/* Ensure nav-link text stands out over the background image */
+.navbar-dark .navbar-nav .nav-link {
+    color: rgb(0, 0, 0) !important; /* Ensure high contrast against the background */
+}
+
+/* Add underline effect on hover */
+.navbar-dark .navbar-nav .nav-link:hover {
+    text-decoration: underline;
+}
+
+.home-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(0, 0, 0);
+}
+
