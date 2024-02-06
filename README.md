@@ -1,5 +1,6 @@
 Django project:
 
+KEY:
 command= - 
 ex: -git status
 
