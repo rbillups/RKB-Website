@@ -1,1 +1,1 @@
-web: gunicorn rkb_main.wsgi
+web: gunicorn rkb_main.wsgi:app
