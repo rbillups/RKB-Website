@@ -2,9 +2,3 @@
 -User can click about me tab; and read description of RKB
 -User can click products tab adn buy through stripe
 -User can login and use personal script
-
-
-Dr. Dawn Tatum witnessed my pursuit in hackathons and academic life.
-dctatum93@gmail.com
-
-Hello Dr. Tatum I sent the points via your Gmail and KSU email.
