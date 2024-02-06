@@ -1,1 +1,1 @@
-web gunicorn rkb_main.wsgi:application --log-file -
+web gunicorn personalWebsite.wsgi:application --log-file -
