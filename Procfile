@@ -1,1 +1,1 @@
-web: gunicorn PersonalWebsite.wsgi
+web: gunicorn RKB-Webstite.wsgi
