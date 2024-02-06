@@ -1,7 +1,7 @@
 Django project:
 
 KEY:
-command= - 
+command= '-' 
 ex: -git status
 
 1. Clone repo
