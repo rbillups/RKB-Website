@@ -1,1 +1,1 @@
-web: gunicorn RKB-Website.wsgi
+web: gunicorn --pythonpath rkb_main rkb_main.wsgi
