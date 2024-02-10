@@ -25,13 +25,13 @@ product_type=[
 # Create your views here.
 def home(request):
     context = {'is_home_page': True}
-    return render(request, 'Website/landingPage.html', context)
+    return render(request, 'landingPage.html', context)
 
 def about(request):
-    return render(request, 'Website/about.html')
+    return render(request, 'about.html')
 
 def products(request):
     context={
         'products':product_type 
     }
-    return render(request, 'Website/products.html',context)
+    return render(request, 'products.html',context)
