@@ -1,10 +1,21 @@
 {% extends "base.html" %}
+{% block title %}Welcome to Subscription Trader{% endblock title %}
 
 {% block content %}
-<div class="home-bg-image">
-    <div class="home-content">
-        <h1>Welcome to Keys eb</h1>
-        <p>This is the homepage.</p>
+<main>
+    <div class="branding">
+        <h2>RKB</h2>
     </div>
-</div>
+    <p class="tagline">Get access to all the streaming services you want!</p>
+    <div class="service-logos">
+        <!-- Service logos here -->
+    </div>
+    <div class="cta-signup">
+        <a href="{% url 'rkb-products' %}" class="signup-button">Sign up</a>
+    </div>
+    <p class="slogan">Subscribe. Share. Save.</p>
+    <div class="how-it-works">
+        <a href="{% url 'rkb-products' %}">How it works</a>
+    </div>
+</main>
 {% endblock content %}
