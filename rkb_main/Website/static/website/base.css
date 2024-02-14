@@ -1,51 +1,149 @@
-body, html {
-    height: 100%;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Set the font-family for the whole document */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header styling */
+header {
+    background: #333;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10%;
+}
+
+.header-container h1 {
+    font-size: 2rem;
+    font-weight: normal;
+}
+
+.login-button a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    background: #007bff;
+    border-radius: 5px;
+}
+
+.login-button a:hover {
+    background: #0056b3;
+}
+
+/* Main content area */
+.main-container {
+    text-align: center;
+    padding: 2rem;
+}
+
+.branding h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.tagline {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+/* Service logos */
+.service-logos img {
+    margin: 0.5rem;
+    height: 50px; /* Adjust as necessary */
+}
+.cta-signup .signup-button {
+    font-size: 1.2rem;
+    background: #28a745;
+    color: white;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.cta-signup .signup-button:hover,
+.cta-signup .signup-button:focus {
+    background-color: #218838;
+}
+
+/* Slogan area */
+.slogan {
+    font-size: 1.2rem;
+    margin: 2rem 0;
+    color: #666;
+}
+
+/* How it works link */
+.how-it-works a {
+    font-size: 1.1rem;
+    color: #007bff;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s ease-in-out;
+}
+
+.how-it-works a:hover,
+.how-it-works a:focus {
+    border-bottom-color: #0056b3;
+}
+
+/* Footer styling */
+footer {
+    background: #333;
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+footer p {
     margin: 0;
 }
 
-.home-bg-image {
-    filter: brightness(50%);
-    height: 100vh; /* Set the height to 50% of the viewport height */
-    background-image: url('images/IMG_3237.JPG');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    position: relative;
-}
-.navbar-brand-logo {
-    display: inline-block; /* Makes it possible to set dimensions */
-    width: 30px; /* Adjust width as needed */
-    height: 30px; /* Adjust height as needed */
-    background-image: url('images/RKB_white.png'); /* Path to your image */
-    /*background-size: cover; /* Ensures the image covers the span area */
-    background-position: center; /* Centers the background image */
-}
+/* Utility classes for margins and padding */
+.mt-2 { margin-top: 2rem; }
+.mb-2 { margin-bottom: 2rem; }
+.pt-2 { padding-top: 2rem; }
+.pb-2 { padding-bottom: 2rem; }
 
+/* Responsive design for smaller devices */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        padding: 1rem;
+    }
 
-.home-navbar {
-    overflow: hidden;
-    backdrop-filter: blur(10px); /* Optional: Add a blur effect for a frosted glass look */
+    .header-container h1,
+    .login-button a {
+        margin-bottom: 1rem;
+    }
+
+    .main-container {
+        padding: 1rem;
+    }
+
+    .service-logos img {
+        height: 40px; /* Adjust size for mobile */
+    }
+
+    .cta-signup .signup-button {
+        padding: 0.8rem 1.6rem;
+    }
+
+    .slogan {
+        font-size: 1rem;
+    }
 }
-
-.navbar-brand {
-    color: rgb(0, 0, 0) !important; /* Ensure high contrast against the background */
-}
-
-/* Ensure nav-link text stands out over the background image */
-.navbar-dark .navbar-nav .nav-link {
-    color: rgb(0, 0, 0) !important; /* Ensure high contrast against the background */
-}
-
-/* Add underline effect on hover */
-.navbar-dark .navbar-nav .nav-link:hover {
-    text-decoration: underline;
-}
-
-.home-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: rgb(0, 0, 0);
-}
-
