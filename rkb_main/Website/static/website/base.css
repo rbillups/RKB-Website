@@ -3,23 +3,21 @@ body, html {
     margin: 0;
 }
 
-.home-bg-image {
-    filter: brightness(50%);
-    height: 100vh; /* Set the height to 50% of the viewport height */
-    background-image: url('images/IMG_3237.JPG');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    position: relative;
+
+/* Increases specificity to ensure styles are applied */
+.navbar-dark.bg-dark .navbar-nav .nav-link, .navbar-dark.bg-dark .navbar-brand {
+    color: #000000 !important; /* Sets text color to black */
 }
-.navbar-brand-logo {
-    display: inline-block; /* Makes it possible to set dimensions */
-    width: 30px; /* Adjust width as needed */
-    height: 30px; /* Adjust height as needed */
-    background-image: url('images/RKB_white.png'); /* Path to your image */
-    /*background-size: cover; /* Ensures the image covers the span area */
-    background-position: center; /* Centers the background image */
+/* Customizes the navbar background color */
+.navbar.bg-dark {
+    background-color: #ffffff !important; /* Example: Changes to white for contrast */
 }
+
+.navbar-nav .nav-item.active .nav-link {
+    color: #ffffff; /* Example: white color for active state */
+    background-color: #007bff; /* Example: light blue background for active state */
+}
+
 
 
 .home-navbar {
@@ -48,4 +46,3 @@ body, html {
     transform: translate(-50%, -50%);
     color: rgb(0, 0, 0);
 }
-
