@@ -3,6 +3,33 @@ body, html {
     margin: 0;
 }
 
+.card {
+    height: 400px; /* Fixed height for all product cards */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Distributes space evenly */
+    background-color: #ffffff; /* Ensures card background is white */
+    border: 1px solid #f0f0f0; /* Light border for a subtle definition */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1), 0 6px 20px rgba(0,0,0,0.1); /* Professional shadow effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Slightly raises the card on hover */
+    box-shadow: 0 10px 16px rgba(0,0,0,0.2), 0 12px 24px rgba(0,0,0,0.2); /* Enhanced shadow effect on hover */
+}
+
+.card-img-top {
+    height: 200px; /* Fixed height for images */
+    object-fit: cover; /* Ensures images cover the area without distorting */
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Helps push the button to the bottom */
+}
+
 
 /* Increases specificity to ensure styles are applied */
 .navbar-dark.bg-dark .navbar-nav .nav-link, .navbar-dark.bg-dark .navbar-brand {
@@ -14,7 +41,7 @@ body, html {
 }
 
 .navbar-nav .nav-item.active .nav-link {
-    color: #ffffff; /* Example: white color for active state */
+    color: #000000; /* Example: white color for active state */
     background-color: #007bff; /* Example: light blue background for active state */
 }
 

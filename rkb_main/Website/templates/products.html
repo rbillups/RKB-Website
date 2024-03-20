@@ -2,29 +2,21 @@
 {% load static %}
 
 {% block content %}
-<div class="product-page">
-    <h1 class="product-page-title" style="text-align: center; color: #333; font-size: 64px; font-weight: normal; margin-top: 20px; margin-bottom: 50px;">Products</h1>
-    <!-- Adjusted product-list div with inline flexbox styling -->
-    <div class="product-list" style="display: flex; justify-content: space-around; flex-wrap: wrap;">
-        <!-- Boxing Shoes -->
-        <div class="product-card" style="width: 30%; padding: 20px; border: 2px solid #ddd; border-radius: 10px; overflow: hidden; transition: transform 0.3s ease; box-shadow: 0 4px 8px rgba(0,0,0,0.2); margin: 10px;">
-            <img src="{% static 'website/images/Boxing_shoes.PNG' %}" alt="MDB LABEL Boxing Shoes" style="max-width: 100%; height: auto; max-height: 300px; object-fit: contain;">
-            <div class="product-details" style="padding: 20px;">
-                <h2 class="product-name" style="font-size: 24px; color: #a54747;">MDB Label Boxing Shoes</h2>
-                <p class="product-price" style="font-size: 20px; color: #666;">Cost: $106.99 + $17 Shipping</p>
-               
-                <button class="btn buy-btn" style="background-color: #007bff; color: white; padding: 12px 24px; cursor: pointer; border: none; border-radius: 5px;">Buy</button>
+<div class="container mt-4">
+    <h2 class="products-title">Products</h2>
+    <div class="row">
+        {% for product in products %}
+        <div class="col-md-4">
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="{% static product.image_path %}" alt="{{ product.name }}">
+                <div class="card-body">
+                    <h5 class="card-title">{{ product.name }}</h5>
+                    <p class="card-text">{{ product.description }}</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
             </div>
         </div>
-        <!-- Running Belt -->
-        <div class="product-card" style="width: 25%; padding: 20px; border: 2px solid #ddd; border-radius: 10px; overflow: hidden; transition: transform 0.3s ease; box-shadow: 0 4px 8px rgba(0,0,0,0.2); margin: 10px;">
-            <img src="{% static 'website/images/running_belt.JPG' %}" alt="SASN Running Belt" style="max-width: 150%; height: auto; max-height: 300px; object-fit: contain;">
-            <div class="product-details" style="padding: 20px;">
-                <h2 class="product-name" style="font-size: 24px; color: #a54747;">SASN Running Belt</h2>
-                <p class="product-price" style="font-size: 20px; color: #666;">Price: $21.99 + $10 Shipping</p>
-                <button class="btn buy-btn" style="background-color: #007bff; color: white; padding: 10px 20px; cursor: pointer; border: none; border-radius: 5px;">Buy</button>
-            </div>
-        </div>
+        {% endfor %}
     </div>
 </div>
 {% endblock %}
